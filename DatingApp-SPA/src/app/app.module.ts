@@ -14,7 +14,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxGalleryModule } from 'ngx-gallery';
-import { TabsModule } from 'ngx-bootstrap';
+import { TabsModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import {TimeAgoPipe} from 'time-ago-pipe';
@@ -72,7 +72,9 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
+      ButtonsModule.forRoot(),
       FileUploadModule,
+      PaginationModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter,
